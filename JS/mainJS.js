@@ -27,15 +27,13 @@ $(function(){
 	});
 	
 	$("#fileSubmission").change(function(){
-		alert(this.files[0].name);
 		if (this.files && this.files[0]) {
-			var reader = new FileReader();
 			
-			reader.onload = function (e) {
-				alert(e.files[0].name);
-			};
+			for(var i = 0; i < this.files.length; i++){
+				$("#contactForm").append( 
+				'<div class="input-group-prepend"> <label class="input-group-text" for="validatedInputGroupSelect">' + this.files[i].name+ '</label> </div>')
+			}
 			
-			reader.readAsDataURL(this.files[0]);
 		}
-	});	
+	});
 });
