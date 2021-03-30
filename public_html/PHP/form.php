@@ -5,9 +5,11 @@
 	include_once "PHPMailer/PHPMailer.php";
 	include_once "PHPMailer/Exception.php";
 	include_once "PHPMailer/SMTP.php";
-	echo "yo2";
 	
 	$mail = new PHPMailer(TRUE);
+	
+	
+	echo "yo2";
 	
 	$ip = $_SERVER['REMOTE_ADDR'];
 	$captchaURL = "https://www.google.com/recaptcha/api/siteverify?secret=6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz";
