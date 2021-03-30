@@ -1,11 +1,11 @@
 $(function(){	
 	
-	$("#contactForm").submit(function(e){
+	contactForm.addEventListener('submit', event => {
         e.preventDefault();
 		grecaptcha.ready(function() {
 			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'contactForm'}).then(function(token) {
 				$("#g-recaptcha-response").value = token;
-				$("#contactForm").submit;
+				contactForm.submit();
 			});
 		});
 	});
