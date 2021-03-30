@@ -1,5 +1,6 @@
 <?php
 	
+	echo "yo";
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 	require 'C:\php\vendor\autoload.php';
