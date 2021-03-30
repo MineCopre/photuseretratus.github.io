@@ -7,6 +7,7 @@
 	$mail = new PHPMailer(TRUE);
 	$captchaURL = "https://www.google.com/recaptcha/api/siteverify?secret=6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz";
 	
+	echo "yo";
 	if (isset($_POST['g-recaptcha-response'])) {
 		$captcha = $_POST['g-recaptcha-response'];
 	} 
