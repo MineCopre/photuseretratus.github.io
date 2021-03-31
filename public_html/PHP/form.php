@@ -12,6 +12,7 @@
 	$responseKeys = json_decode($response, true);
 	
 	if ($responseKeys["success"] && $responseKeys["action"] == 'contactForm') {
+	echo "yo"
             if ($responseKeys["score"] >= 0.5) {
                 echo "yay";
             } elseif ($responseKeys["score"] < $g_recaptcha_allowable_score) {
