@@ -4,17 +4,18 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
-
-	require_once "vendor/autoload.php";
 	
+	/*
+	require_once "vendor/autoload.php";
+	*/
 	
 	echo "yo2";
 	
-	$ip = $_SERVER['REMOTE_ADDR'];
+	/*$ip = $_SERVER['REMOTE_ADDR'];
 	$captchaURL = "https://www.google.com/recaptcha/api/siteverify?secret=6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz";
 	$response = file_get_contents($url);
 	$responseKeys = json_decode($response, true);
-	
+	*/
 	echo "yo3";
 	
 	if ($responseKeys["success"] && $responseKeys["action"] == 'contactForm') {
