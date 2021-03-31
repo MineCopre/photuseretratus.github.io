@@ -18,7 +18,7 @@
 		echo "ola";
 		$response = json_decode($response);
 		
-		echo $response;
+		echo $response->success;
 		
 		if ($response->success === false) {
 			echo "nay";
