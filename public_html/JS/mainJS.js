@@ -2,10 +2,14 @@ $(function(){
 	
 	contactForm.addEventListener('submit', event => {
         e.preventDefault();
+		alert("1");
 		grecaptcha.ready(function() {
+		alert("2");
 			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'contactForm'}).then(function(token) {
+				alert("3");
 				$("#g-recaptcha-response").value = token;
 				contactForm.submit();
+				alert("4"):
 			});
 		});
 	});
