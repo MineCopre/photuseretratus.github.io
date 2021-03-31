@@ -3,9 +3,10 @@ $(function(){
 	$('#contactForm').on('submit', function () {
 		e.preventDefault();
 		grecaptcha.ready(function() {
+		alert("teste");
 			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'submit'}).then(function(token) {
 				$("#g-recaptcha-response").value = token;
-				$('#contactForm').submit();
+				alert("teste2");
 			});
 		});
 	});
