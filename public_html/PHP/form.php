@@ -10,9 +10,10 @@
 	$captchaURL = "https://www.google.com/recaptcha/api/siteverify?secret=6LfmF8AZAAAAAF284CXnmOJzsaZ8hZ-e9TQfHHIz";
 	$response = file_get_contents($url);
 	$responseKeys = json_decode($response, true);
+
 	
 	if ($responseKeys["success"] && $responseKeys["action"] == 'contactForm') {
-	echo "yo"
+	echo "yo";
             if ($responseKeys["score"] >= 0.5) {
                 echo "yay";
             } elseif ($responseKeys["score"] < $g_recaptcha_allowable_score) {
