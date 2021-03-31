@@ -10,7 +10,7 @@ $(function(){
 				alert("3");
 				$("#g-recaptcha-response").value = token;
 				contactForm.submit();
-				alert("4"):
+				alert("4");
 			});
 		});
 	});
