@@ -1,9 +1,11 @@
 $(function(){	
-
-	grecaptcha.ready(function() {
-		grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'submit'}).then(function(token) {
-			alert(token);
-			$("#g-recaptcha-response").value = token;
+	
+	$('#contactForm').on('submit', function () {
+		grecaptcha.ready(function() {
+			grecaptcha.execute('6LfmF8AZAAAAAFNT2ytbglM2hGpeJif1CmZgZZXm', {action:'submit'}).then(function(token) {
+				console.log(token);
+				$("#g-recaptcha-response").value = token;
+			});
 		});
 	});
 	
