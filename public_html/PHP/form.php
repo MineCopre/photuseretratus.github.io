@@ -2,11 +2,12 @@
 	
 	echo "yo";
 	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
 
 	require_once "vendor/autoload.php";
 	
-	$mail = new PHPMailer(TRUE);
+	$mail = new PHPMailer(true);
 	
 	
 	echo "yo2";
