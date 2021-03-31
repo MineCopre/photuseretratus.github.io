@@ -7,8 +7,6 @@
 
 	require_once "vendor/autoload.php";
 	
-	$mail = new PHPMailer(true);
-	
 	
 	echo "yo2";
 	
@@ -39,7 +37,7 @@
     //Do something to denied access
 }
 	
-	
+	/*
 	
 		try {
 		
@@ -76,5 +74,5 @@
 		catch (\Exception $e)
 		{
 		echo $e->getMessage();
-	}
+	}*/
 ?>
