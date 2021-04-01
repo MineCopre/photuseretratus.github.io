@@ -38,13 +38,13 @@
 					
 					$mail->Port = 587;
 					
-					$mail->setFrom($_POST['email']);
+					$mail->setFrom = $_POST['email'];
 					
 					$mail->addAddress('diogoah99@gmail.com');
 					
 					$mail->Subject = 'Force';
 					
-					$mail->Body = "oi";
+					$mail->Body = $_POST['email'];
 					
 					//$mail->AddAttachment($_POST['fileSubmission']);
 					
