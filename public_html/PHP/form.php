@@ -20,7 +20,11 @@
 				
 				try {
 					
+					echo "teste";
+					
 					$mail = new PHPMailer();
+					
+					echo "test2";
 					
 					$mail->isSMTP();
 					
