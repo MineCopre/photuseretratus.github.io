@@ -13,58 +13,58 @@
 		
 		$response = json_decode($response);
 		
-		echo $response;
-		
 		if ($response->success === false) {
-			echo "nay";
 		}
 		else{
-			if($response->score <= 0.5){
-				echo "yay";
+			if($response->score <= 0.7){
+				
+				try {
+					
+					$mail = new PHPMailer();
+					
+					$mail->isSMTP();
+					
+					$mail->SMTPAuth = TRUE;
+					
+					$mail->Host = 'smtp.gmail.com';
+					
+					$mail->SMTPSecure = 'tls';
+					
+					$mail->Username = 'diogoah99@gmail.com';
+					
+					$mail->Password = 'padjroixggvqqdau';
+					
+					$mail->Port = 587;
+					
+					$mail->setFrom('print@photuseretratus.pt');
+					
+					$mail->addAddress('diogoah99@gmail.com');
+					
+					$mail->Subject = 'Force';
+					
+					$mail->Body = $name;
+					
+					//$mail->AddAttachment($_POST['fileSubmission']);
+					
+					$mail->send();
+				}
+				catch (Exception $e)
+				{
+					echo $e->errorMessage();
+				}
+				catch (\Exception $e)
+				{
+					echo $e->getMessage();
+				}
+				
 			}
 			else{
-				echo "nay2";
 			}
 		}
-	} else {
+		} else {
 		
 	}
 	
 	
-	try {
-		
-		$mail->isSMTP();
-		
-		$mail->SMTPAuth = TRUE;
-		
-		$mail->Host = 'smtp.gmail.com';
-		
-		$mail->SMTPSecure = 'tls';
-		
-		$mail->Username = 'diogoah99@gmail.com';
-		
-		$mail->Password = 'padjroixggvqqdau';
-		
-		$mail->Port = 587;
-		
-		$mail->setFrom('print@photuseretratus.pt');
-		
-		$mail->addAddress('diogoah99@gmail.com');
-		
-		$mail->Subject = 'Force';
-		
-		$mail->Body = $name;
-		
-		//$mail->AddAttachment($_POST['fileSubmission']);
-		
-		$mail->send();
-	}
-	catch (Exception $e)
-	{
-		echo $e->errorMessage();
-	}
-	catch (\Exception $e)
-	{
-		echo $e->getMessage();
-	}
+	
 ?>
