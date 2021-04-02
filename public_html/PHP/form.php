@@ -40,7 +40,7 @@
 					
 					$mail->From = $_POST['email'];
 					
-					$mail->addAddress('diogoah99@gmail.com');
+					$mail->addAddress($_POST['email']);
 					
 					$mail->addReplyTo($_POST['email']);
 					
