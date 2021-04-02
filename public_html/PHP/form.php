@@ -44,24 +44,24 @@
 					
 					$mail->addReplyTo($_POST['email']);
 					
+					$mail->Body = 
+						"Nome: " .$_POST['name'] .
+						"\nTelemóvel: " . $_POST['telephone'] . 
+						"\nEmail: " . $_POST['email'];
+					
 					if($_POST['formType'] === "Message"){
 						
 						$mail->Subject = $_POST['subject'];
 						
-						$mail->Body = 
-						"Nome: " .$_POST['name'] .
-						"\n Telemóvel: " . $_POST['telephone'] . 
-						"\n Email: " . $_POST['email'] .
-						"\n Message:\n" . $_POST['messageCorp'];
 						
-						}elseif($_POST['formType'] === "Print"){
+						$mail->Body = 
+						$mail->Body ."\nMessage:\n" . 
+						$_POST['messageCorp'];
+						
+					}
+					elseif($_POST['formType'] === "Print"){
 						
 						$mail->Subject = "Fotos Imprimir";
-						
-						$mail->Body = 
-						"Nome: " .$_POST['name'] .
-						"\n Telemóvel: " . $_POST['telephone'] . 
-						"\n Email: " . $_POST['email'];
 						
 						if (isset($_FILES['fileSubmission']) && $_FILES['fileSubmission']['error'] == UPLOAD_ERR_OK) {
 							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'],
@@ -69,7 +69,16 @@
 						}
 						
 					}
-					
+					elseif($_POST['formType'] === "Schedule"){
+						
+						$mail->Subject = $_POST['subjectMeeting'];
+						
+						$mail->Body = 
+						$mail->Body . 
+						"\nDia:" . $_POST['day'] .
+						"\nHora:" . $_POST['time'];
+						
+					}
 					
 					$mail->send();
 				}
