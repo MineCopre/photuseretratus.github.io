@@ -64,7 +64,7 @@
 						$mail->Subject = "Fotos Imprimir";
 						
 						$zip = new ZipArchive();
-						$zipName = "teste.zip";
+						$zipName = "./teste.zip";
 						
 						if ($zip->open($zipName, ZipArchive::CREATE)!==TRUE) {
 							echo "Error creating zip";
@@ -84,10 +84,10 @@
 							echo "filename: " . $zip->filename . "\n";
 							echo "comment: " . $zip->comment . "\n";
 							
-							echo is_file("/var/www/photuseretratus.pt/public_html/PHP/test.txt");
-							echo is_file($zip->filename);
+							if(is_file("/var/www/photuseretratus.pt/public_html/PHP/test.txt")){echo "yay1";}
+							if(is_file($zip->filename)){echo "yay2"};
 							$mail->AddAttachment("/var/www/photuseretratus.pt/public_html/PHP/test.txt", "test.txt");
-							$mail->AddAttachment($zip->filename, $zipName);
+							$mail->AddAttachment("./teste.zip");
 							
 							$zip->close();
 							
