@@ -64,7 +64,8 @@
 						$mail->Subject = "Fotos Imprimir";
 						
 						$zip = new ZipArchive();
-						$zipName = "./teste";
+						$zipName = "./teste.zip";
+						
 						if ($zip->open($filename, ZipArchive::CREATE)!==TRUE) {
 							echo "shit";
 						}
