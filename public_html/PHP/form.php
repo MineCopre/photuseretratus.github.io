@@ -65,7 +65,6 @@
 						
 						$zip = new ZipArchive();
 						
-						
 						if (isset($_FILES['fileSubmission']) && $_FILES['fileSubmission']['error'] == UPLOAD_ERR_OK) {
 						
 							echo count($_FILES['fileSubmission']['tmp_name']);
