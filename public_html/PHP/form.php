@@ -47,15 +47,14 @@
 					if($_POST['formType'] === "Message"){
 						
 						$mail->Subject = $_POST['subject'];
-					
+						
 						$mail->Body = 
 						"Nome: " .$_POST['name'] .
 						"\n Telemóvel: " . $_POST['telephone'] . 
 						"\n Email: " . $_POST['email'] .
 						"\n Message:\n" . $_POST['messageCorp'];
-						echo "message";
-					
-					}elseif($_POST['formType'] === "Print"){
+						
+						}elseif($_POST['formType'] === "Print"){
 						
 						$mail->Subject = "Fotos Imprimir";
 						
@@ -64,9 +63,11 @@
 						"\n Telemóvel: " . $_POST['telephone'] . 
 						"\n Email: " . $_POST['email'];
 						
-						$mail->AddAttachment($_POST['fileSubmission']);
-					
-						echo "print";
+						if (isset($_FILES['fileSubmission']) && $_FILES['fileSubmission']['error'] == UPLOAD_ERR_OK) {
+							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'],
+							$_FILES['fileSubmission']['name']);
+						}
+						
 					}
 					
 					
