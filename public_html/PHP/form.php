@@ -45,9 +45,9 @@
 					$mail->addReplyTo($_POST['email']);
 					
 					$mail->Body = 
-						"Nome: " .$_POST['name'] .
-						"\nTelemóvel: " . $_POST['telephone'] . 
-						"\nEmail: " . $_POST['email'];
+					"Nome: " .$_POST['name'] .
+					"\nTelemóvel: " . $_POST['telephone'] . 
+					"\nEmail: " . $_POST['email'];
 					
 					if($_POST['formType'] === "Message"){
 						
@@ -64,11 +64,14 @@
 						$mail->Subject = "Fotos Imprimir";
 						
 						$zip = new ZipArchive();
-					
-						echo count($_FILES['fileSubmission']['name']);
+						
+						foreach($_FILES['fileSubmission']['tmp_name'] as $i => $name)
+						{
+							echo "yay";
+						}
 						
 						if (count($_FILES['fileSubmission']['name'] > 0) {
-						
+							
 							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'], $_FILES['fileSubmission']['name']);
 						}
 						
