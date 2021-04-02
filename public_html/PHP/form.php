@@ -64,12 +64,19 @@
 						$mail->Subject = "Fotos Imprimir";
 						
 						$zip = new ZipArchive();
+						$zipName = "./teste";
+						$zip->open(zipName, ZIPARCHIVE::CREATE)
 						
 						if (isset($_FILES['fileSubmission']['tmp_name'])) {
 							
-							echo "yay";
-							echo count($_FILES['fileSubmission']['tmp_name']);
-							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'][0], $_FILES['fileSubmission']['name'][0]);
+							for($i = 0; $i < count($_FILES['fileSubmission']['tmp_name']; $i++)){
+								$zip->addFile($_FILES['fileSubmission']['tmp_name'][$i]);
+								$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'][$i], $_FILES['fileSubmission']['name'][$i]);
+							}
+							
+							$zip->close();
+							
+							$mail->addAttachment($zipName);
 						}
 						
 					}
