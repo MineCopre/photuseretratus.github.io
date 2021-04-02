@@ -44,6 +44,8 @@
 					
 					$mail->addReplyTo($_POST['email']);
 					
+					echo $_POST['email'];
+					
 					if($_POST['formType'] === Message){
 						
 						$mail->Subject = $_POST['subject'];
@@ -51,6 +53,8 @@
 						$mail->Body = $_POST['messageCorp'];
 					
 					}
+					
+					echo $_POST['email'];
 					
 					//$mail->AddAttachment($_POST['fileSubmission']);
 					
