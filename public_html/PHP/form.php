@@ -4,9 +4,6 @@
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
 	
-	if(extension_loaded('zip'))
-		echo "yay";
-	
 	require_once "../../vendor/autoload.php";
 	
 	if (isset($_POST['g-recaptcha-response'])) {
@@ -65,6 +62,8 @@
 					elseif($_POST['formType'] === "Print"){
 						
 						$mail->Subject = "Fotos Imprimir";
+						
+						$zip = new ZipArchive();
 						
 						if (isset($_FILES['fileSubmission']) && $_FILES['fileSubmission']['error'] == UPLOAD_ERR_OK) {
 							$mail->AddAttachment($_FILES['fileSubmission']['tmp_name'],
