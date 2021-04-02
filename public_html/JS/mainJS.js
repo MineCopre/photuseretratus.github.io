@@ -42,5 +42,15 @@ $(function(){
 			}
 			
 		}
+	});	
+	
+	$("#fileSubmission2").change(function(){
+		if (this.files && this.files[0]) {
+			for(var i = 0; i < this.files.length; i++){
+				$("#contactForm").append( 
+				'<div class="input-group-prepend"> <label class="input-group-text" for="validatedInputGroupSelect">' + this.files[i].name+ '</label> </div>')
+			}
+			
+		}
 	});		
 });		
