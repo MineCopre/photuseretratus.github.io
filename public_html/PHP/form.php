@@ -84,10 +84,8 @@
 							echo "filename: " . $zip->filename . "\n";
 							echo "comment: " . $zip->comment . "\n";
 							
-							if(is_file("/var/www/photuseretratus.pt/public_html/PHP/test.txt")){echo "yay1";}
-							if(is_file($zip->filename)){echo "yay2"};
 							$mail->AddAttachment("/var/www/photuseretratus.pt/public_html/PHP/test.txt", "test.txt");
-							$mail->AddAttachment("./teste.zip");
+							$mail->AddAttachment($zipName);
 							
 							$zip->close();
 							
