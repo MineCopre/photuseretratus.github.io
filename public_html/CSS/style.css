@@ -7,14 +7,6 @@ iframe{
 	max-width:95% !important;
 }
 
-#Contacts li{
-	width:90%;
-}
-
-#Contacts li:first-child{
-	width:10%;
-}
-
 .row{
 	margin-top:2%;
 }
