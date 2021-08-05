@@ -1,5 +1,13 @@
 @import "../bootstrap/scss/bootstrap";
 
 .body{
-    background-color: aqua;
+    background-color: $cyan-900;
+}
+
+footer{
+    background-color: $cyan-900;
+}
+
+.navbar{
+    background-color: $blue-700;
 }
