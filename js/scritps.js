@@ -1,6 +1,24 @@
 $(document).ready(function () {
 
+    var imagekit = new ImageKit({
+        publicKey: "public_TGL83sxiUWGZfYFL0MMz9r7AXTw=",
+        urlEndpoint: "https://ik.imagekit.io/minecopre",
+        authenticationEndpoint: "http://photuseretratus.pt/auth",
+    });  
+
+    var imageURL = imagekit.url({
+        path: "/assets/header.jpg",
+        urlEndpoint: "https://ik.imagekit.io/your_imagekit_id/endpoint/",
+        transformation: [{
+            "height": "300",
+            "width": "400"
+        }]
+    });
+
     $(document).scroll(function () {
+
+        imageURL
+
         if ($(window).scrollTop() === 0) {
             $("#mainNav").stop().animate({
                 backgroundColor: 'transparent',
