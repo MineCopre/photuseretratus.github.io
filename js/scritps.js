@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     $(document).scroll(function () {
 
-        imageURL();
+        alert(imageURL)
 
         if ($(window).scrollTop() === 0) {
             $("#mainNav").stop().animate({
