@@ -1,24 +1,5 @@
 $(document).ready(function () {
 
-    import ImageKit from "imagekit-javascript"
-
-    var imagekit = new ImageKit({
-        publicKey: "public_TGL83sxiUWGZfYFL0MMz9r7AXTw=",
-        urlEndpoint: "https://ik.imagekit.io/minecopre",
-        authenticationEndpoint: "http://photuseretratus.pt/auth",
-    });  
-
-    var imageURL = imagekit.url({
-        path: "/assets/header.jpg",
-        urlEndpoint: urlEndpoint,
-        transformation: [{
-            "height": "300",
-            "width": "400"
-        }]
-    });
-    
-    alert(imageURL)
-
     $(document).scroll(function () {
 
         if ($(window).scrollTop() === 0) {
