@@ -9,7 +9,7 @@ $imageKit = new ImageKit(
 );
 
 $imageURL = $imageKit->url(array(
-    "path" => "/assets/" + $text,
+    "path" => "/assets/header.jpg",
     "transformation" => array(
         array(
             "height" => "300",
@@ -17,3 +17,5 @@ $imageURL = $imageKit->url(array(
         )
     )
 ));
+
+echo $imageURL;
