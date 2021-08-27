@@ -15,15 +15,15 @@ $imageKit = new ImageKit(
     "https://ik.imagekit.io/minecopre"
 );
 
-$imageURL = $imageKit->url(array(
-    "path" => $sample_file_path,
-    "transformation" => array(
-        array(
-            "height" => "300",
-            "width" => "400",
-        ),
-    ),
-));
+class SimpleClass
+{
+    // property declaration
+    public $var = 'a default value';
 
+    // method declaration
+    public function displayVar() {
+        echo $this->var;
+    }
+}
 
 ?>

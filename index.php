@@ -63,7 +63,7 @@
 				</div>
 			</nav>
 			<header id="masthead">
-				<img src="https://ik.imagekit.io/minecopre/header.jpg">
+				<img src="https://ik.imagekit.io/minecopre/header.webp">
 			</header>
 			<section class="about-section" id="About">
 				<div class="container px-4">
@@ -85,10 +85,18 @@
 				<div class="container px-4 text-center justify-content-center">
 					<div class="row gx-0 mb-5 mb-lg-0 ">
 						<div class="col-lg-6">
-							<img src="https://ik.imagekit.io/minecopre/self.jpg">
+							<img src="https://ik.imagekit.io/minecopre/self.webp">
 						</div>
 						<div class="col-lg-6 bg-dark text-white">
-							<h1>JPG</h1>
+							<h1>Reportagens</h1>
+						</div>
+					</div>
+					<div class="row gx-0 mb-5 mb-lg-0">
+						<div class="col-lg-6 ">
+							<img src="https://ik.imagekit.io/minecopre/self.webp">
+						</div>
+						<div class="col-lg-6 order-lg-first bg-dark text-white">
+							<h1>Eventos Sociais</h1>
 						</div>
 					</div>
 					<div class="row gx-0 mb-5 mb-lg-0">
@@ -96,23 +104,7 @@
 							<img src="https://ik.imagekit.io/minecopre/self.webp">
 						</div>
 						<div class="col-lg-6 bg-dark text-white">
-							<h1>WEBPG LOSSY</h1>
-						</div>
-					</div>
-					<div class="row gx-0 mb-5 mb-lg-0">
-						<div class="col-lg-6 ">
-							<img src="https://ik.imagekit.io/minecopre/self_L1.webp">
-						</div>
-						<div class="col-lg-6 bg-dark text-white">
-							<h1>WEBPG LOSSLESS 100Compression</h1>
-						</div>
-					</div>
-					<div class="row gx-0 mb-5 mb-lg-0">
-						<div class="col-lg-6 ">
-							<img src="https://ik.imagekit.io/minecopre/self_L0.webp">
-						</div>
-						<div class="col-lg-6 bg-dark text-white">
-							<h1>WEBPG LOSSLESS 0Compression</h1>
+							<h1>Sessões</h1>
 						</div>
 					</div>
 				</div>
