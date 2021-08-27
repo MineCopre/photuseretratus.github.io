@@ -25,6 +25,5 @@ $imageURL = $imageKit->url(array(
     ),
 ));
 
-echo $imageURL;
 
 ?>
