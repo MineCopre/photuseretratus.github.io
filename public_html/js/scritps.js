@@ -1,12 +1,21 @@
 $(document).ready(function () {
 
-    const ImageKit = require("../imagekit-javascript")
+    const ImageKit = require("../../node_modules/imagekit-javascript")
 
     var imagekit = new ImageKit({
         urlEndpoint: "https://ik.imagekit.io/minecopre/"
     }); 
 
-    alert(imagekit)
+    var imageURL = imagekit.url({
+        path: "/headers.jpg",
+        urlEndpoint:  "https://ik.imagekit.io/minecopre/",
+        transformation: [{
+            "height": "300",
+            "width": "400"
+        }]
+    });
+
+    $("#masthead").find("img").attr('src', imageURL);
 
     $(document).scroll(function () {
 
