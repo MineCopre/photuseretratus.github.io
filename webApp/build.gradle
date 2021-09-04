@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'pt.photuseretratus'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+	implementation 'com.google.code.gson:gson:2.8.8'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'com.github.imagekit-developer:imagekit-java:1.0.3'
+}
+
+test {
+	useJUnitPlatform()
+}

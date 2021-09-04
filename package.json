@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "browserify": "^17.0.0",
-    "imagekit-javascript": "^1.4.1"
-  }
-}
