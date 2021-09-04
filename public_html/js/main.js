@@ -35,7 +35,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "GET",
-            url: "https://photuseretratus.pt/geturl?path=/" + $(this).attr('src'),
+            url: "https://photuseretratus.pt/imagekitio/geturl?path=/" + $(this).attr('src'),
             contentType: "text/plain",
             dataType: "text",
             success: function (data) {
