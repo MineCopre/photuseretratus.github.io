@@ -21,11 +21,12 @@ $(document).ready(function () {
         }).done(function (data) {
             if(img.hasClass("backgroundImage")){
                 img.parent().css("background-image","url(" + data +')')
-                
                 img.remove();
             }
-            else
+            else{
                 img.attr("src", data)
+            }
+            img.width("100%")   
         })
 
     })
@@ -58,10 +59,6 @@ $(document).ready(function () {
     new bootstrap.ScrollSpy(document.body, {
         target: '#mainNav'
     })
-
-    
-
-        
 
 })
 
