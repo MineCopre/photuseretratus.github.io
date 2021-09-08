@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
 
 	<meta name="description" content="PhotusERetratus Website" />
 	<meta name="author" content="MineCopre" />
@@ -45,48 +45,54 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-		<div class="container px-4 px-lg-5">
-			<a class="navbar-brand" href="index.html">Photus&ampRetratus</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ms-auto text-center">
-					<li class="nav-item"><a class="nav-link" href="#About">Sobre</a></li>
-					<li class="nav-item"><a class="nav-link" href="#Projects">Projectos</a></li>
-					<li class="nav-item"><a class="nav-link" href="#Contact">Contactos</a></li>
-				</ul>
-			</div>
+	<div class="d-flex justify-content-center" id="loading">
+		<div class="spinner-border" style="width: 25rem; height: 25rem;" role="status">
 		</div>
-	</nav>
-	<header id="masthead">
-		<img src="header.webp">
-	</header>
-	<section class="about-section" id="About">
-		<div class="container px-4">
-			<div class="row gx-0 align-items-center">
-				<div class="col col-lg-8">
-					<img class="img-fluid" src="self.jpg">
+	</div>
+	<div style="visibility:hidden" id="hiddenContent">
+		<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+			<div class="container px-4 px-lg-5">
+				<a class="navbar-brand" href="index">Photus&ampRetratus</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto text-center">
+						<li class="nav-item" id="test1"><a class="nav-link" href="#About">Sobre</a></li>
+						<li class="nav-item" id="test2"><a class="nav-link" href="#Projects">Projectos</a></li>
+						<li class="nav-item" id="test3"><a class="nav-link" href="#Contact">Contactos</a></li>
+					</ul>
 				</div>
-				<div class="col" id="textCol">
-					<div class="featured-text text-center">
-						<blockquote class="blockquote">
-							<p>Pessoas fazem fotos de qualquer coisa bonita...
-								Fotógrafos fazem fotos bonitas de qualquer coisa.</p>
-						</blockquote>
-						<figcaption class="blockquote-footer">
-							<cite title="Source Title">Rafael Correa Batista</cite>
-						</figcaption>
+			</div>
+		</nav>
+		<header id="masthead">
+			<img src="" alt="header.jpg">
+		</header>
+		<section class="about-section" id="About">
+			<div class="container px-4">
+				<div class="row gx-0 align-items-center">
+					<div class="col col-lg-8">
+						<img class="img-fluid" alt="self.jpg">
+					</div>
+					<div class="col" id="textCol">
+						<div class="featured-text text-center">
+							<blockquote class="blockquote">
+								<p>Pessoas fazem fotos de qualquer coisa bonita...
+									Fotógrafos fazem fotos bonitas de qualquer coisa.</p>
+							</blockquote>
+							<figcaption class="blockquote-footer">
+								<cite title="Source Title">Rafael Correa Batista</cite>
+							</figcaption>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!--section class="projects-section" id="Projects">
-		<div class="container px-4 text-center justify-content-center">
+		</section>
+		<section class="projects-section text-center" id="Projects">
+			<h1>Reportagens - brevement</h1>
+		<!--div class="container px-4 text-center justify-content-center">
 			<div class="row gx-0 mb-5 mb-lg-0 ">
 				<div class="col col-lg-6">
 					<img src="self.webp">
@@ -114,53 +120,64 @@
 		</div>
 		<div class="modal-dialog modal-fullscreen">
 
-		</div>
-	</section-->
-	<section class="contact-section" id="Contact">
-		<div class="container px-4">
-			<div class="row gx-4 ">
-				<div class="col col-md-4 mb-3 mb-md-0">
-					<div class="card py-4 h-100">
-						<div class="card-body text-center">
-							<span>
-								<i class="fas fa-map-marker-alt"></i>
-							</span>
-							<h6 class="text-uppercase m-0">Endereço</h6>
-							<hr class="my-4 mx-auto">
-							<div class="small text-black-50">3400-136 R. Dr. Adelinio Júnior Mendes Abreu 2A,
-								Oliveira
-								do
-								Hospital</div>
+		</div-->
+	</section>
+		<section class="contact-section hasBackgroundImage" id="Contact">
+			<img class="backgroundImage" src="" alt="header.jpg">
+			<div class="container px-4">
+				<div class="row gx-4 ">
+					<div class="col col-md-4 mb-3 mb-md-0">
+						<div class="card py-4 h-100">
+							<div class="card-body text-center">
+								<span>
+									<i class="fas fa-map-marker-alt"></i>
+								</span>
+								<h6 class="text-uppercase m-0">Endereço</h6>
+								<hr class="my-4 mx-auto">
+								<div class="small text-black-70">
+									<strong>
+										3400-136 R. Dr. Adelinio Júnior Mendes Abreu 2A, Oliveira do Hospital
+									</strong>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col col-md-4 mb-3 mb-md-0">
-					<div class="card py-4 h-100">
-						<div class="card-body text-center">
-							<span>
-								<i class="fas fa-envelope"></i>
-							</span>
-							<h6 class="text-uppercase m-0">Email</h6>
-							<hr class="my-4 mx-auto">
-							<div class="small text-black-50">photuseretratus@gmail.com</div>
+					<div class="col col-md-4 mb-3 mb-md-0">
+						<div class="card py-4 h-100">
+							<div class="card-body text-center">
+								<span>
+									<i class="fas fa-envelope"></i>
+								</span>
+								<h6 class="text-uppercase m-0">Email</h6>
+								<hr class="my-4 mx-auto">
+								<div class="small text-black-70">
+									<strong>
+										photuseretratus@gmail.com
+									</strong>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col col-md-4 mb-3 mb-md-0">
-					<div class="card py-4 h-100">
-						<div class="card-body text-center">
-							<span>
-								<i class="fas fa-phone"></i>
-							</span>
-							<h6 class="text-uppercase m-0">Phone</h6>
-							<hr class="my-4 mx-auto">
-							<div class="small text-black-50">+351 926 785 502</div>
+					<div class="col col-md-4 mb-3 mb-md-0">
+						<div class="card py-4 h-100">
+							<div class="card-body text-center">
+								<span>
+									<i class="fas fa-phone"></i>
+								</span>
+								<h6 class="text-uppercase m-0">Phone</h6>
+								<hr class="my-4 mx-auto">
+								<div class="small text-black-70">
+									<strong>
+										+351 926 785 502
+									</strong>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 </body>
 
 </html>

@@ -13,15 +13,22 @@ $(document).ready(function () {
             type: "POST",
             url: "https://photuseretratus.pt/imagekitio/posturl",
             data: JSON.stringify({
-                path: img.attr("src"),
+                path: img.attr("alt"),
                 transformation: transformation
             }),
             contentType: "application/json",
         }).done(function (data) {
-            img.attr("src", data)
+            if(img.hasClass("backgroundImage")){
+                img.parent().css("background-image","url(" + data +')')
+                
+                img.remove();
+            }
+            else
+                img.attr("src", data)
         })
 
     })
+
 
     $(document).scroll(function () {
 
@@ -47,8 +54,16 @@ $(document).ready(function () {
         }
     })
 
-    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    new bootstrap.ScrollSpy(document.body, {
         target: '#mainNav'
+    })
+
+    $(window).on('load', function() {
+
+        window.scrollTo(0, 0);
+        $("#loading").remove();
+        $("#hiddenContent").css('visibility', 'visible');
+
     })
 
 })
