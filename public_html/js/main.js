@@ -12,7 +12,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost/imagekitio/posturl",
+            url: "https://photuseretratus.pt/imagekitio/posturl",
             data: JSON.stringify({
                 path: img.attr("alt"),
                 transformation: transformation
