@@ -59,11 +59,12 @@ $(document).ready(function () {
         target: '#mainNav'
     })
 
-    $(window).on('load', function() {
-
+    $(window).bind('load', function(){
         $("#loading").remove();
         $("#hiddenContent").css('visibility', 'visible');
 
     })
+
+        
 
 })
