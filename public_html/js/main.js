@@ -35,9 +35,10 @@ $(document).ready(function () {
 
         var transformationMap = new Map()
         transformationMap.set("width", img.parent().width())
+        
 
         const transformation = Object.fromEntries(transformationMap);
-
+        
         $.ajax({
             type: "POST",
             url: "https://photuseretratus.pt/imagekitio/posturl",
@@ -53,7 +54,7 @@ $(document).ready(function () {
             } else {
                 img.attr("src", data)
             }
-            img.width("100%")
+            img.width(""+transformationMap.get("width")+"px")
         })
 
     })
