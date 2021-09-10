@@ -54,7 +54,7 @@ $(document).ready(function () {
             } else {
                 img.attr("src", data)
             }
-            img.width(""+transformationMap.get("width")+"px")
+            img.attr("width",transformationMap.get("width"))
         })
 
     })
