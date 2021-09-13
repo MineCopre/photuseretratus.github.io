@@ -29,6 +29,7 @@ $(document).ready(function () {
 
     }
 
+
     $('img').map(function () {
 
         var img = $(this)
@@ -36,12 +37,13 @@ $(document).ready(function () {
         var transformationMap = new Map()
         transformationMap.set("width", img.parent().width())
         
-
+        img.attr("width",img.parent().width())
         const transformation = Object.fromEntries(transformationMap);
         
+
         $.ajax({
             type: "POST",
-            url: "https://photuseretratus.pt/imagekitio/posturl",
+            url: "http://localhost/imagekitio/posturl",
             data: JSON.stringify({
                 path: img.attr("alt"),
                 transformation: transformation
@@ -54,7 +56,6 @@ $(document).ready(function () {
             } else {
                 img.attr("src", data)
             }
-            img.attr("width",transformationMap.get("width"))
         })
 
     })
@@ -70,6 +71,10 @@ $(document).ready(function () {
         offset: 7
     });
     
+    $(window).resize(function(){
+        location.reload();
+    });
+
 })
 
 $(window).bind('load', function () {

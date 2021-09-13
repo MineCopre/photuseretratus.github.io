@@ -2,6 +2,7 @@ package pt.photuseretratus.webApp;
 
 import io.imagekit.sdk.ImageKit;
 import io.imagekit.sdk.config.Configuration;
+import io.imagekit.sdk.models.BaseFile;
 import io.imagekit.sdk.models.results.ResultList;
 import io.imagekit.sdk.utils.Utils;
 
@@ -15,8 +16,9 @@ public class ImageKitIO {
 
     ImageKit imageKit;
     Configuration configuration;
+
     public ImageKitIO() throws IOException {
-        this.imageKit=ImageKit.getInstance();
+        this.imageKit = ImageKit.getInstance();
         configuration = new Configuration();
         configuration.setPrivateKey(System.getenv("IMAGEKITIOPRIV"));
         configuration.setPublicKey("public_TGL83sxiUWGZfYFL0MMz9r7AXTw=");
@@ -24,14 +26,14 @@ public class ImageKitIO {
         this.imageKit.setConfig(configuration);
     }
 
-    public String getURL(URLInfo urlInfo){
+    public String getURL(URLInfo urlInfo) {
 
-        List<Map<String, String>> transformation=new ArrayList<Map<String, String>>();
+        List<Map<String, String>> transformation = new ArrayList<Map<String, String>>();
         transformation.add(urlInfo.getTransformation());
 
-        Map<String, Object> options=new HashMap<>();
+        Map<String, Object> options = new HashMap<>();
         options.put("path", urlInfo.getPath());
-        options.put("transformation",transformation);
+        options.put("transformation", transformation);
 
         return imageKit.getUrl(options);
 

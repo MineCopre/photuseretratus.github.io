@@ -5,7 +5,16 @@ import java.util.Map;
 public class URLInfo {
 
     String path;
+    String tag;
     Map<String, String> transformation;
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
 
     public String getPath() {
         return path;
