@@ -6,7 +6,16 @@ public class URLInfo {
 
     String path;
     String tag;
+    String name;
     Map<String, String> transformation;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getTag() {
         return tag;

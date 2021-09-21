@@ -1,53 +1,79 @@
 @import "../bootstrap/scss/bootstrap.scss";
 
-body{
-    position:relative;
-}
+body {
 
-.headerDark {
-    background-color: rgb(10, 10, 10)
-}
+    section {
 
-#mainNav {
-    
-    .active {
-        border-bottom: 3px solid #2e4b70 !important;
-        font-weight: 200;
+        padding: 3rem;
+
     }
 
-}
+    #mainNav {
 
-#About {
-    @media (min-width:992px) {
-        #textCol {
-            border-left: 5px solid #2e4b70;
+        .active {
+            border-bottom: 3px solid #2e4b70 !important;
+            font-weight: 200;
+        }
+
+    }
+
+    #About {
+        @media (min-width:992px) {
+            #textCol {
+                border-left: 5px solid #2e4b70;
+            }
+        }
+
+    }
+
+    #Portfolio {
+
+        .col-lg-6 {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 50%;
+            height: auto;
+            min-height: 100%;
+
+            h2 {
+
+                opacity: 0%;
+
+            }
+
+            &:hover {
+
+                h2 {
+                    opacity: 100%;
+                }
+            }
+        }
+
+    }
+
+    #Contact {
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 35rem;
+        padding: 15rem 0; //linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000 100%), url("../assets/header.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+
+        span {
+            font-size: 1em;
+            color: #2e4b70;
+        }
+
+        .card {
+            border-bottom: 3px solid #2e4b70;
         }
     }
 
-}
-
-
-section {
-    padding: 3rem;
-}
-
-#Contact {
     position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 35rem;
-    padding: 15rem 0; //linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000 100%), url("../assets/header.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-
-    span {
-        font-size: 1em;
-        color: #2e4b70;
-    }
-
-    .card {
-        border-bottom: 3px solid #2e4b70;
-    }
 }
