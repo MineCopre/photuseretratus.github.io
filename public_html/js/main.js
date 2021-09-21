@@ -53,7 +53,6 @@ function getIndexImagesUrl() {
 
         img.attr("width", img.parent().width())
         const transformation = Object.fromEntries(transformationMap);
-
         let json = JSON.stringify({
             name: img.attr("name"),
             path: img.attr("path"),
