@@ -1,32 +1,25 @@
-HELP.md
-.gradle
-build/
+/webApp/HELP.md
+/webApp/.gradle
+/webApp/build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-BOOT-INF
-META-INForg
+/webApp/!gradle/wrapper/gradle-wrapper.jar
+/webApp/!**/src/main/**/build/
+/webApp/!**/src/test/**/build/
+/webApp/BOOT-INF
+/webApp/META-INF
+/webApp/org
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+/webApp/.idea
+/webApp/*.iws
+/webApp/*.iml
+/webApp/*.ipr
+/webApp/out/
+/webApp/!**/src/main/**/out/
+/webApp/!**/src/test/**/out/
 
 ### NetBeans ###
 /nbproject/private/
