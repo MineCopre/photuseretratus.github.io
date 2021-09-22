@@ -112,7 +112,7 @@ function generatePortfolioSection() {
                 '<div class="col-lg-6' +
                 '" data-bs-toggle="modal" data-bs-target="#Modal" id=' + data[i] + '>' +
                 '<div class="card bg-dark text-white">' +
-                '<img class="card-img-top" path="/" name=' + data[i] + '>' +
+                '<img class="card-img-top" path="/" name=' + data[i] + 'alt=' + data[i] + '>' +
                 '<div class="card-img-overlay ">' +
                 '<h2 class="position-absolute top-50 start-50 translate-middle card-title">' + data[i] + '</h2>' +
                 '</div>' +
