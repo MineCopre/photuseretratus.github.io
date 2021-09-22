@@ -169,7 +169,9 @@ $(document).ready(function () {
         carousel.to($(this).attr("position"))
     })
 
-    $(window).resize(function(){location.reload();});
+    $(window).on('resize', function () {
+        location.reload();
+    });
 
 })
 
