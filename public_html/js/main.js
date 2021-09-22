@@ -149,7 +149,7 @@ $(document).ready(function () {
 
     indexLoading()
 
-    var myModal = new bootstrap.Modal(document.getElementById('Modal'), {})
+    /*var myModal = new bootstrap.Modal(document.getElementById('Modal'), {})
 
     $("#Estúdio").click(function () {
         myModal.show()
@@ -168,7 +168,7 @@ $(document).ready(function () {
     $("#carouselNav").find("li").click(function () {
         carousel.to($(this).attr("position"))
     })
-
+*/
     $(window).on('resize', function () {
         location.reload();
     });
